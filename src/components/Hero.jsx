@@ -16,9 +16,9 @@ const Hero = () => {
         </div>
 
         <div>
-          <h1 className={styles.heroHeadText}>
+          <div className={styles.heroHeadText}>
             Hi, {`I'm`} <span className="text-[#915eff]">Sourabh</span>
-          </h1>
+          </div>
           <p className={`${styles.heroSubText} mt-2 text-white`}>
             Frontend Web Developer - specialized in Next.js & React.js
           </p>
@@ -27,7 +27,7 @@ const Hero = () => {
 
       <ComputersCanvas />
 
-      <div className="absolute bottom-10 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center">
         <Link href="#about">
           <div className="w-[30px] h-[55px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1">
             <motion.dev
