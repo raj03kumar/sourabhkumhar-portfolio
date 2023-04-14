@@ -21,7 +21,7 @@
     "postcss": "8.4.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-tilt": "^1.0.2",
+    "react-parallax-tilt": "^1.7.128",
     "react-vertical-timeline-component": "^3.6.0",
     "tailwindcss": "3.3.1",
     "three": "^0.151.3"
