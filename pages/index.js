@@ -26,7 +26,7 @@ const Page = () => {
       <Feedbacks />
 
       <div>
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );
