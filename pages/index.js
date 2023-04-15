@@ -9,26 +9,33 @@ import {
   Tech,
   Works,
 } from "@/src/components";
+import Head from "next/head";
 import React from "react";
 
 const Page = () => {
   return (
-    <div className="relative z-0 bg-primary">
-      <div>
-        <Navbar />
-        <Hero />
-      </div>
+    <>
+      <Head>
+        <title>Sourabh Kumhar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <div className="relative z-0 bg-primary">
+        <div>
+          <Navbar />
+          <Hero />
+        </div>
 
-      <About />
-      <Experience />
-      <Tech />
-      <Works />
-      <Feedbacks />
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
 
-      <div>
-        <Contact />
+        <div>
+          <Contact />
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -53,7 +53,7 @@ const ComputersCanvas = () => {
     };
   }, []);
 
-  return (
+  const obj = (
     <Canvas
       frameloop="demand"
       shadows
@@ -73,6 +73,8 @@ const ComputersCanvas = () => {
       <Preload all />
     </Canvas>
   );
+
+  return obj || <>Loading</>;
 };
 
 export default ComputersCanvas;
