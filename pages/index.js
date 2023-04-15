@@ -27,7 +27,6 @@ const Page = () => {
 
       <div>
         <Contact />
-        <StarsCanvas />
       </div>
     </div>
   );
