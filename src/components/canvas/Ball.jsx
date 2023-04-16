@@ -1,30 +1,31 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useMemo } from "react";
 import { Canvas } from "@react-three/fiber";
-import {
-  Decal,
-  Float,
-  OrbitControls,
-  Preload,
-  useTexture,
-} from "@react-three/drei";
+import { Decal, Float, OrbitControls, useTexture } from "@react-three/drei";
 import CanvasLoader from "../Loader";
+import * as THREE from "three";
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl.src]);
+const Ball = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl.src]);
+
+  const memoizedGeometry = useMemo(
+    () => new THREE.IcosahedronGeometry(1, 1),
+    []
+  );
+  const memoizedMaterial = useMemo(
+    () =>
+      new THREE.MeshStandardMaterial({ color: "#fff8eb", flatShading: true }),
+    []
+  );
 
   return (
     <Float speed={1} rotationIntensity={1.75}>
       <ambientLight intensity={0.25} />
       <directionalLight position={[0, 0, 0.05]} />
-      <mesh scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial
-          color="#fff8eb"
-          polygonOffset
-          polygonOffsetFactor={-5}
-          flatShading
-        />
-
+      <mesh
+        geometry={memoizedGeometry}
+        material={memoizedMaterial}
+        scale={2.75}
+      >
         <Decal
           position={[0, 0, 1]}
           map={decal}
@@ -38,13 +39,14 @@ const Ball = (props) => {
 
 const BallCanvas = ({ icon }) => {
   return (
-    <Canvas frameloop="always" gl={{ preserveDrawingBuffer: true }}>
+    <Canvas
+      frameloop="always"
+      gl={{ powerPreference: "low-power", alpha: false }}
+    >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls enableZoom={false} />
         <Ball imgUrl={icon} />
       </Suspense>
-
-      <Preload all />
     </Canvas>
   );
 };

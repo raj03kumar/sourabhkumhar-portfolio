@@ -23,7 +23,10 @@ export default function App({ Component, pageProps }) {
         <meta name="keywords" content={metaData.keywords} />
         <meta name="author" content={metaData.author} />
       </Head>
-      <Component {...pageProps} />
+
+      <div className="select-none">
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }

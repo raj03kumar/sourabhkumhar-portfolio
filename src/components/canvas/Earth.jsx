@@ -5,11 +5,11 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 
 const Earth = () => {
   const earth = useGLTF("./planet/scene.gltf");
-  return <primitive object={earth.scene} scale={2.5} />;
+  return <primitive object={earth.scene} scale={2.5} position={[0, 0, 0]} />;
 };
 
 const EarthCanvas = () => {
-  return ( 
+  return (
     <Canvas
       shadows
       frameloop="demand"

@@ -6,7 +6,7 @@ import Link from "next/link";
 import bg from "../assets/herobg.jpg";
 import Image from "next/image";
 
-const Hero = () => {
+const Hero = ({ isMobile }) => {
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
       <Image
@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <ComputersCanvas />
+      <ComputersCanvas isMobile={isMobile} />
 
       <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center">
         <Link href="#about">
