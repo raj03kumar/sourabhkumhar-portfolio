@@ -15,10 +15,6 @@ import React from "react";
 const Page = () => {
   return (
     <>
-      <Head>
-        <title>Sourabh Kumhar</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <div className="relative z-0 bg-primary">
         <div>
           <Navbar />
