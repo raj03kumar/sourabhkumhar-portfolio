@@ -29,7 +29,7 @@ const Page = () => {
         <Experience />
         <Tech />
         <Works />
-        <Feedbacks />
+        {/* <Feedbacks /> */}
 
         <div>
           <Contact />

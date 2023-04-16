@@ -4,7 +4,7 @@ import {
   creator,
   web,
   javascript,
-  typescript,
+  next,
   html,
   css,
   reactjs,
@@ -12,16 +12,10 @@ import {
   tailwind,
   nodejs,
   mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
+  indivue,
+  beatstore,
+  myresumesite,
+  notesapp,
   threejs,
 } from "../assets";
 
@@ -42,19 +36,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Frontend Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "React.js/Next.js Developer",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Node.js Developer",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Tailwind CSS Developer",
     icon: creator,
   },
 ];
@@ -71,6 +65,10 @@ const technologies = [
   {
     name: "JavaScript",
     icon: javascript,
+  },
+  {
+    name: "Next JS",
+    icon: next,
   },
   {
     name: "React JS",
@@ -97,51 +95,12 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    company_name: "Indivue Technologies",
+    icon: indivue,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "October 2022 - March 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Developing and maintaining frontend of web applications using React.js and MUI and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
@@ -178,12 +137,12 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "BeatStore",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform that allows users to search, buy, and sell beats from various producers, providing a convenient and efficient solution for online beat selling/buying.",
     tags: [
       {
-        name: "react",
+        name: "next.js",
         color: "blue-text-gradient",
       },
       {
@@ -195,50 +154,48 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: beatstore,
+    live_link: "https://beatstore.in/",
   },
   {
-    name: "Job IT",
+    name: "My Resume - Sourabh Kumhar",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Web application, created to showcase my personal details, skills and projects. It is my Web Resume and you can also dowload my pdf of resume.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "bootstrap",
         color: "green-text-gradient",
       },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: myresumesite,
+    source_code_link: "https://github.com/sourabhkumhar/myResume",
+    live_link: "https://sourabhkumhar.vercel.app",
   },
   {
-    name: "Trip Guide",
+    name: "Notes App",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "A comprehensive notes saving platform that allows users to save notes securely with authentication and provide fast notes fetching.",
     tags: [
       {
-        name: "nextjs",
+        name: "react.js",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
+        name: "node.js",
         color: "pink-text-gradient",
       },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: notesapp,
+    source_code_link: "https://github.com/sourabhkumhar/iNotebook",
+    live_link: "https://inotebook-coral.vercel.app/",
   },
 ];
 

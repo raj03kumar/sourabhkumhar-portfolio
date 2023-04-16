@@ -6,7 +6,7 @@ import { styles } from "../utils/styles";
 import { projects } from "../constants";
 import Tilt from "react-parallax-tilt";
 import Image from "next/image";
-import { github } from "../assets";
+import { github, link } from "../assets";
 
 const ProjectCard = ({
   index,
@@ -15,6 +15,7 @@ const ProjectCard = ({
   tags,
   image,
   source_code_link,
+  live_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -32,17 +33,31 @@ const ProjectCard = ({
             className="w-full h-full object-cover rounded-2xl"
           />
 
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_black")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-            >
-              <Image
-                src={github}
-                alt={github}
-                className="w-2/3 h-2/3 object-contain"
-              />
-            </div>
+          <div className="absolute inset-0 flex justify-end m-3 gap-1 card-img_hover">
+            {source_code_link && (
+              <div
+                onClick={() => window.open(source_code_link, "_black")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <Image
+                  src={github}
+                  alt="Github"
+                  className="w-2/3 h-2/3 object-contain"
+                />
+              </div>
+            )}
+            {live_link && (
+              <div
+                onClick={() => window.open(live_link, "_black")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+              >
+                <Image
+                  src={link}
+                  alt="Link"
+                  className="w-2/3 h-2/3 object-contain"
+                />
+              </div>
+            )}
           </div>
         </div>
 

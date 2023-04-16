@@ -8,8 +8,12 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <Image src={bg} alt="bg" className="absolute top-20 z-[-1]" />
+    <section className="relative w-full h-screen mx-auto overflow-hidden">
+      <Image
+        src={bg}
+        alt="bg"
+        className="absolute z-[-1] xl:min-w-full min-w-[1600px] min-h-[100vh]"
+      />
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
