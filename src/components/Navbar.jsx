@@ -9,12 +9,17 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
 
+  const handleLink = (id) => {
+    let elem = document.getElementById(id);
+    elem.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
       <div className="w-full flex justify-between items-center mx-auto">
-        <Link
+        <span
           href="/"
           className="flex items-center gap-2"
           onClick={() => {
@@ -30,7 +35,7 @@ const Navbar = () => {
           <p className="text-white text-[18px] font-bold cursor-pointer">
             Sourabh Kumhar
           </p>
-        </Link>
+        </span>
 
         <ul className="list-none hidden sm:flex flex-row gap-8">
           {navLinks.map((link) => (
@@ -39,9 +44,12 @@ const Navbar = () => {
               className={`${
                 active === link.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
+              onClick={() => {
+                setActive(link.title);
+                handleLink(link.id);
+              }}
             >
-              <Link href={`#${link.id}`}>{link.title}</Link>
+              <span>{link.title}</span>
             </li>
           ))}
         </ul>
