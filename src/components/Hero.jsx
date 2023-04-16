@@ -7,9 +7,15 @@ import bg from "../assets/herobg.jpg";
 import Image from "next/image";
 
 const Hero = ({ isMobile }) => {
+  const handleLink = (id) => {
+    let elem = document.getElementById(id);
+    elem.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden">
       <Image
+        draggable={false}
         src={bg}
         alt="bg"
         className="absolute z-[-1] xl:min-w-full min-w-[1600px] min-h-[100vh]"
@@ -35,7 +41,7 @@ const Hero = ({ isMobile }) => {
       <ComputersCanvas isMobile={isMobile} />
 
       <div className="absolute xs:bottom-10 bottom-20 w-full flex justify-center items-center">
-        <Link href="#about">
+        <span onClick={() => handleLink("about")} className="cursor-pointer">
           <div className="w-[30px] h-[55px] rounded-3xl border-4 border-secondary flex justify-center items-start p-1">
             <motion.div
               animate={{
@@ -49,7 +55,7 @@ const Hero = ({ isMobile }) => {
               className="w-3 h-3 rounded-full bg-secondary mb-1"
             />
           </div>
-        </Link>
+        </span>
       </div>
     </section>
   );

@@ -28,6 +28,7 @@ const Navbar = () => {
           }}
         >
           <Image
+            draggable={false}
             src={logo}
             alt="Sourabh Kumhar"
             className="w-9 h-9 object-contain"
@@ -56,6 +57,7 @@ const Navbar = () => {
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <Image
+            draggable={false}
             src={toggle ? close : menu}
             alt="menu"
             className="w-[28px] h-[28px] object-contain cursor-pointer"
@@ -66,7 +68,7 @@ const Navbar = () => {
             style={{
               height: toggle ? "calc(140px)" : "calc(0px)",
             }}
-            className={`fixed overflow-hidden duration-300 black-gradient top-16 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`fixed overflow-hidden duration-300 bg-gradient-to-r from-[#210b64] via-[#170846] to-[#0f052c] top-16 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4 m-4">
               {navLinks.map((link) => (
@@ -80,7 +82,7 @@ const Navbar = () => {
                     setToggle(!toggle);
                   }}
                 >
-                  <Link href={`#${link.id}`}>{link.title}</Link>
+                  <span onClick={() => handleLink(link.id)}>{link.title}</span>
                 </li>
               ))}
             </ul>

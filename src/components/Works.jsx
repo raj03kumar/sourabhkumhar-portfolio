@@ -27,7 +27,7 @@ const ProjectCard = ({
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
       >
         <div className="relative w-full h-[230px]">
-          <Image
+          <Image draggable={false}
             src={image}
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
@@ -39,7 +39,7 @@ const ProjectCard = ({
                 onClick={() => window.open(source_code_link, "_black")}
                 className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
               >
-                <Image
+                <Image draggable={false}
                   src={github}
                   alt="Github"
                   className="w-2/3 h-2/3 object-contain"
@@ -51,7 +51,7 @@ const ProjectCard = ({
                 onClick={() => window.open(live_link, "_black")}
                 className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
               >
-                <Image
+                <Image draggable={false}
                   src={link}
                   alt="Link"
                   className="w-2/3 h-2/3 object-contain"
